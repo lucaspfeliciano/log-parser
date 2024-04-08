@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "baseUrl": "./src",
+      "strictPropertyInitialization": false,
+      "paths": {
+        "@api/*": ["api/*"],
+        "@config/*": ["service/*"],
+        "@shared/*": ["shared/*"]
+      },
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "forceConsistentCasingInFileNames": true
+    }
+  }
