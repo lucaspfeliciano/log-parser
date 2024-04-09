@@ -2,9 +2,9 @@ import { Router } from 'express';
 
 import LogParserController from '../controllers/LogParserController';
 
-const ordersRouter = Router();
-const ordersController = new LogParserController();
+const logParserRoutes = Router();
+const logParserController = new LogParserController();
 
-ordersRouter.post('/parse', ordersController.parse);
+logParserRoutes.post('/parse', logParserController.parse);
 
-export default ordersRouter;
+export default logParserRoutes;
