@@ -8,10 +8,13 @@ export default class LogParserController {
 
     const service = new LogParserService()
 
-    const parsed = await service.execute({ file: '' })
+    const {buffer, log} = await service.execute({ file: request.file.path })
     
     logger.info('Response parse quase log')
 
-    return response.json({ parsed });
+    response.attachment('invoice.pdf')
+    response.end(buffer);
+
+    return response.json(log)
   }
 }
